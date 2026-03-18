@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./components/common/ProtectedRoute";
+import AdminPanel from "./pages/AdminPanel";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import PropertyDetail from "./pages/PropertyDetail";
@@ -12,6 +13,7 @@ const App = () => {
 
 			<Route element={<ProtectedRoute />}>
 				<Route path="/dashboard" element={<Dashboard />} />
+				<Route path="/admin" element={<AdminPanel />} />
 				<Route path="/properties/new" element={<RegisterProperty />} />
 				<Route path="/properties/:propertyId" element={<PropertyDetail />} />
 			</Route>
